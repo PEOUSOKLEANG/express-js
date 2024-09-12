@@ -1,0 +1,50 @@
+how set up express first 
+
+Step 1
+npm init -y 
+npm install express 
+npm  i -D nodemon 
+
+
+Step 2 
+then set up package.json like this 
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev":"nodemon ./src/index.mjs",
+    "start":"node ./src/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "type":"module"
+}
+
+
+Step3 
+after Creaet dir src/index.mjs 
+
+** to make sure app can run**
+
+import express from "express";
+
+const app = express();
+
+const PORT = process.env.PORT || 3004;
+app.listen(PORT ,()=>{
+    console.log(`app is running on port:${PORT}`);
+    
+})
+
+
+
