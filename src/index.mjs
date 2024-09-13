@@ -1,6 +1,6 @@
 import express from "express";
 
-const app = express();
+const app = express.json();
 const mockUser = [
     {id:1 , username:"sokleang" , displayname:"sokleang"},
     {id:2 , username:"sokkim" , displayname:"sokkim"},
